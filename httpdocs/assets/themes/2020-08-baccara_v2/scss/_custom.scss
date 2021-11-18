@@ -1,0 +1,152 @@
+// Header
+//
+.wrapper-header {
+	.nav-pills > li:first-of-type > a {
+		padding-right: 0;
+	}
+	.dropdown-menu {
+		z-index: 10003;
+	}
+}
+.nav > li > a:hover, .nav > li > a:focus {
+	background:rgba(0, 0, 0, 0);
+}
+.navbar {
+	margin-bottom: 0;
+	background-color: transparent;
+	border-color: transparent;
+}
+.navbar-collapse {
+	padding-left: 0;
+	padding-right: 0;
+	@include media-breakpoint-up(sm) {
+		.navbar-nav > li:first-of-type > a {
+			padding-left: 0;
+		}
+	}
+}
+.nAccountButton {
+	margin-top: 20px; // match the margin top of .header-search, #header-cart from above
+}
+.dropdown-menu {
+	margin: 0;
+}
+// Mobile Nav
+//
+.nMobileNav{
+	width:100%;
+	margin-bottom: 0;
+	@extend .list-inline;
+	@extend .d-flex;
+	@extend .d-md-none;
+	@extend .flex-wrap;
+	@extend .justify-content-center;
+	@extend .text-center;
+	li{
+		width: 24%;
+		a{
+			color: #fff;
+			font-size: 12px;
+			.icon {
+				font-size: 25px;
+			}
+		}
+	}
+}
+@include media-breakpoint-down(sm) {
+	.navbar-nav .dropdown-menu{
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		display: block;
+		.dropdown-item{
+			color: #fff;
+		}
+	}
+}
+#main-content {
+	background-color: #fff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+// Ad Placeholders
+.neto-placeholder {
+	padding: 110px 0;
+	font-size: 30px;
+}
+.neto-placeholder-rotator {
+	display: block;
+	background: $gray-100;
+	color: $gray-400;
+	text-align: center;
+
+	&:hover {
+		color: $gray-400;
+		text-decoration: none;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.carousel-indicators {
+		display: none;
+	}
+}
+.carousel-caption {
+	@include media-breakpoint-up(sm) {
+		border: 1px solid white;
+		background: #ffffff4d;
+	}
+	@include media-breakpoint-down(sm) {
+		bottom: 0;
+		padding: 0;
+
+		.h3 {
+			font-size: 14px;
+		}
+
+		.btn-lg {
+			font-size: 12px;
+		}
+	}
+	text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+}
+.nav-pills.nav-pills-right > li {
+	float: right;
+}
+.thumbnail{
+	& > .caption .h3 {
+		font-size: 18px;
+		height: 4em;
+	}
+	.savings-container {
+		top: 1px;
+		left: 3px;
+		right: 3px;
+	}
+}
+#n_product .qty {
+	text-align: left;
+}
+// Footer
+//
+.wrapper-footer{
+	h4 {
+		margin: 30px 0 15px;
+	}
+	.list-inline, address {
+		margin-top: 30px;
+	}
+}
+
+// Fix for jquery UI
+.ui-widget-header {
+	background: $gray-100 !important;
+}
+.ui-state-focus,
+.ui-state-hover,
+.ui-widget-content .ui-state-focus,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-focus,
+.ui-widget-header .ui-state-hover {
+	border: 1px solid $gray-600 !important;
+	background: $gray-100 !important;
+}
