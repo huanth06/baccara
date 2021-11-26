@@ -1,0 +1,113 @@
+// B4 Overrides
+// Color system
+//
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #ebebeb; //Not default B4
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black:    #000;
+
+$blue:    #006FF5; // Not default B4
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #d9534f;
+$orange:  #fd7e14;
+$yellow:  #f0ad4e;
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #5bc0de;
+
+$dark-blue: #201D15;
+$brown: #463F2F;
+
+$primary:       $dark-blue;
+$secondary:     $gray-200; //Not default B4
+$success:       $brown;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+// Components
+//
+// Define common padding and border radius sizes and more.
+$border-radius:              0;
+$border-radius-lg:           .125rem;
+$border-radius-sm:           0;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+$input-btn-padding-y:         .375rem;
+$input-btn-padding-x:         .75rem;
+
+$input-btn-padding-y-lg:      .625rem;
+$input-btn-padding-x-lg:      .875rem;
+
+$input-btn-padding-y-sm:      .25rem;
+$input-btn-padding-x-sm:      .5rem;
+
+$input-btn-focus-width:       .1rem;
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+$enable-caret:              true;
+$enable-rounded:            true;
+$enable-shadows:            false;
+$enable-gradients:          false;
+$enable-transitions:        true;
+$enable-hover-media-query:  false; // Deprecated, no longer affects any compiled CSS
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
+$enable-validation-icons:   false;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif:      "Muli", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-base:            $font-family-sans-serif;
+
+$font-size-base:              .875rem; // Assumes the browser default, typically `1rem==16px`
+$font-size-lg:                1rem;
+$font-size-sm:                .75rem;
+
+$h1-font-size:                $font-size-base * 1.875;
+$h2-font-size:                $font-size-base * 1.5;
+$h3-font-size:                $font-size-base * 1.3125;
+$h4-font-size:                $font-size-base * 1.125;
+$h5-font-size:                $font-size-base * 0.9375;
+$h6-font-size:                $font-size-base;
+
+$headings-font-family:        "Merriweather";
+
+$display1-size:               4.5rem;
+$display2-size:               4.125rem;
+$display3-size:               3.375rem;
+$display4-size:               2.625rem;
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg:                   $white;
+$body-color:                $gray-900;
+// Links
+//
+// Style anchor elements.
+$link-color:                $primary;
+$link-decoration:           none;
+$link-hover-color:          darken($link-color, 15%);
+$link-hover-decoration:     underline;
+// Breadcrumbs
+//
+$breadcrumb-bg:               $gray-100;
+
+// Navbar
+
+$navbar-nav-link-padding-x:         1rem;
+

@@ -1,0 +1,98 @@
+[%if [@config:show_home_ads@]%]
+	[%advert type:'text' template:'carousel' limit:'10' ad_group:'slide_show'%]
+		[%param *header%]
+			<section id="homepageCarousel" class="carousel slide" data-ride="carousel" aria-label="Banner images">
+				[%if [@total_showing@] > 1%]
+					<ol class="carousel-indicators">
+						[%site_value id:'counter' type:'load'/%]
+					</ol>
+				[%/if%]
+				<div class="carousel-inner">
+		[%/param%]
+		[%param *footer%]
+				</div>
+				[%if [@total_showing@] > 1%]
+					<a class="carousel-control-prev" href="#homepageCarousel" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#homepageCarousel" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				[%/if%]
+			</section>
+		[%/param%]
+		[%param *ifempty%]
+			<a class="neto-placeholder neto-placeholder-rotator btn-loads" data-loading-text="<i class='fa fa-spinner fa-spin' style='font-size: 14px'></i>" href="[@config:home_url@]/_cpanel?item=adw&page=view&id=New&plan_id=1">
+				Click to add a banner<br/>
+			</a>
+		[%/param%]
+	[%/advert%]
+[%/if%]
+<div class="section-cateogory">
+<div class="container">
+	[%content_menu content_type:'category' sortby:'sortorder_desc' show_empty:'1'%]
+	[%param *header%]
+	<div class="wrap-banner">
+		[%/param%]
+		[%param *level_1 limit:'8'%]
+		<a class="item" href="[@url@]" title="[@name@]">
+			<div class="inner">
+				<div class="images">
+					<img src=""  data-src="[%asset_url type:'content' id:'[@content_id@]' default:'[@config:imageurl@]/na.gif'/%]" class="lazyload" width="243px" height="203px" alt="images">
+				</div>
+				<span class="link-more">Shop now</span>
+				<h3>[@name@]</h3>
+			</div>
+		</a>
+		[%/param%]
+		[%param *footer%]
+	</div>
+	[%/param%]
+	[%/content_menu%]
+</div>
+</div>
+
+</div>
+<div class="section-product bg-gray pd-tb-30 space-40">
+	<div class="container">
+		<div class="title-page">
+			<h2>Featured Products</h2>
+		</div>
+		<div class="owl-carousel wrap-two-item thumbnail" data-margin="10" data-lg-items="2" data-md-items="2" data-sm-items="2" data-xs-items="1" data-xss-items="1" data-nav="true" data-dot="true" data-auto-play="true">
+			[%advert type:'product' ad_group:'featured_products' template:'featured' limit:'12'/%]
+		</div>
+	</div>
+</div>
+<div class="section-home-video">
+	<div class="container">
+		<div class="d-flex">
+			[%advert type:'text' limit:'1' ad_group:'home_ad_text'%]
+			[%param *header%]
+			<div class="item text">
+				[%/param%]
+				[%param *body%]
+				<h2>[@headline@]</h2>
+				<p>[@description@]</p>
+				<a class="btn btn-primary" href="[@url@]" title="[@linktext@]">[@linktext@]</a>
+				[%/param%]
+				[%param *footer%]
+			</div>
+			[%/param%]
+			[%/advert%]
+			<div class="item">
+				[%content_zone id:'iframe_yotube' if_empty:''/%]
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section-home-content">
+    <div class="container">
+    <div class="row">
+        <div class="col-12">
+         [@content_description1@]
+         </div>
+    </div>    
+    </div>
+</div>

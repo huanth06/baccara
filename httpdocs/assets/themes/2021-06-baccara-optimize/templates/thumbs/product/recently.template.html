@@ -1,0 +1,17 @@
+[%cache type:'recently' id:'[@inventory_id@]'%]
+<li class="items" role="article" aria-label="Product Thumbnail">
+	<div class="images">
+		<a href="[@URL@]" title="[@model@]">
+			<img src="[%asset_url type:'product' thumb:'thumb' id:'[@SKU@]'%][%param default%][%cdn_asset html:'0' library:'images'%]default_product.gif[%/cdn_asset%][%end param%][%/ asset_url%]" class="product-image img-fluid" width="100%" alt="[@model@]" rel="itmimg[@SKU@]">
+		</a>
+		[%if [@inpromo@]%]
+			<div class="savings-container"><span class="badge badge-danger">On Sale</span></div>
+		[%/ if%]
+	</div>
+	<div class="text">
+		<p class="title mb-1">
+			<a href="[@URL@]">[%format type:'text' maxlength:'50' rmhtml:'1'%][@model@][%/ FORMAT%]</a>
+		</p>
+	</div>
+</li>
+[%/cache%]
