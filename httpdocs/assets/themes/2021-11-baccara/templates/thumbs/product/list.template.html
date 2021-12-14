@@ -4,7 +4,7 @@
 		<meta itemprop="mpn" content="[@sku@]"/>
 		<div class="inner">
 			<a href="[@URL@]" class="thumbnail-image">
-				<img src="[%asset_url type:'product' thumb:'thumb' id:'[@sku@]'%][%param default%][%cdn_asset html:'0' library:'images'%]default_product.gif[%/cdn_asset%][%/param%][%/asset_url%]" itemprop="image" class="product-image img-fluid" alt="[@model@]" rel="itmimg[@sku@]">
+				<img class="lazy" data-src="[%asset_url type:'product' thumb:'thumb' id:'[@sku@]'%][%param default%][%cdn_asset html:'0' library:'images'%]default_product.gif[%/cdn_asset%][%/param%][%/asset_url%]" itemprop="image" class="product-image img-fluid" alt="[@model@]" rel="itmimg[@sku@]">
 			</a>
 			<div class="text [%if [@save@] > 0%]pt-20[%/if%]">
 				<p class="card-title h4" itemprop="name"><a href="[@URL@]" title="[@model@]">[%format type:'text' maxlength:'100' rmhtml:'1'%][@model@][%/format%]</a></p>
